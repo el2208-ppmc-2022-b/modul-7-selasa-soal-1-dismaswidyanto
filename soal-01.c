@@ -139,10 +139,11 @@ int main()
 		{
 			printf("Berikut adalah daftar buku yang akan dipinjam!");
 			showCheckout(currCheckout);
-			printf("\nTerimakasih sudah menggunakan layanan Checkout Buku!");
+			
 			cmd = 'E';
 		}
 	}
+	printf("\nTerimakasih sudah menggunakan layanan Checkout Buku!");
 	return 0;
 }
 

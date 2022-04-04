@@ -115,12 +115,12 @@ int main()
 			char ch = '\n';
 			strncat(str,&ch,1);
 			printf("%s\n",str);
-			token = strtok(str, ",");
-			strcpy(bookBuf.author, token);
-			token = strtok(NULL, ",");
-			strcpy(bookBuf.BookTitle, token);
-			bookBuf.BookCheckout = bookId;
-			bookId++;
+		//	token = strtok(str, ",");
+		//	strcpy(bookBuf.author, token);
+		//	token = strtok(NULL, ",");
+		//	strcpy(bookBuf.BookTitle, token);
+		//	bookBuf.BookCheckout = bookId;
+		//	bookId++;
 		//	push(currCheckout, bookBuf);
 		}
 

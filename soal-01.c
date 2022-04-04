@@ -103,7 +103,7 @@ int main()
         {
             printf("\nMasukkan Nama Buku dan Penulis Buku: ");
 	    scanf("%s",str);
-	    char ch = '\n''
+	    char ch = '\n';
 	    strncat(str,&ch,1);
 		
             token = strtok(str, ",");

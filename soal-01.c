@@ -130,7 +130,6 @@ int main()
 	else if (cmd == 'S')
         {
             showCheckout(currCheckout);
-	    getchar();
         }
 		
 	else if (cmd == 'C')
@@ -150,7 +149,6 @@ int main()
 	else
 	{
 		printf("\nInput Perintah Salah! Silahkan Coba Lagi!");
-		getchar();
 	}
     }
 	printf("\nTerimakasih sudah menggunakan layanan Checkout Buku!");

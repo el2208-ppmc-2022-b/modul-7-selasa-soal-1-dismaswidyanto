@@ -57,15 +57,6 @@ void showCheckout(stack *Checkout)
 		printf("Checkout Buku Kosong!\n");
 		return;
 	}
-	//Reverse Stack
-	stack *reversed_display;
-	reversed_display = malloc(sizeof(stack));
-	reversed_display->top = NULL;
-	while (tmp != NULL)
-	{
-		push(reversed_display, tmp->bookData);
-		tmp = tmp->nextNode;
-	}
 
 	//Tampilkan Stack
 	tmp = reversed_display->top;

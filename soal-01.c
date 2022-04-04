@@ -111,7 +111,7 @@ int main()
 		if (cmd == 'A')
 		{
 			printf("Masukkan Nama Buku dan Penulis Buku: ");
-			scanf("%s[^\n]",str);
+			scanf("%[^\n]s",str);
 		//	char ch = '\n';
 		//	strncat(str,&ch,1);
 			printf("%s\n",str);

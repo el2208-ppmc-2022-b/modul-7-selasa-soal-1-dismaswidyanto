@@ -132,13 +132,13 @@ int main()
 		}
 		if (cmd == 'S')
 		{
-			showCheckout(currCheckout);
+			//showCheckout(currCheckout);
 		}
 		
 		if (cmd == 'C')
 		{
 			printf("Berikut adalah daftar buku yang akan dipinjam!");
-			showCheckout(currCheckout);
+			//showCheckout(currCheckout);
 			
 			cmd = 'E';
 		}

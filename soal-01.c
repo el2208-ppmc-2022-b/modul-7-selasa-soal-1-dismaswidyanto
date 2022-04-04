@@ -111,34 +111,34 @@ int main()
 		if (cmd == 'A')
 		{
 			printf("Masukkan Nama Buku dan Penulis Buku: ");
-			scanf("%s",str);
-			char ch = '\n';
-			strncat(str,&ch,1);
+			scanf("%s[^\n]",str);
+		//	char ch = '\n';
+		//	strncat(str,&ch,1);
 			printf("%s\n",str);
-		//	token = strtok(str, ",");
-		//	strcpy(bookBuf.author, token);
-		//	token = strtok(NULL, ",");
-		//	strcpy(bookBuf.BookTitle, token);
-		//	bookBuf.BookCheckout = bookId;
-		//	bookId++;
-		//	push(currCheckout, bookBuf);
+			token = strtok(str, ",");
+			strcpy(bookBuf.author, token);
+			token = strtok(NULL, ",");
+			strcpy(bookBuf.BookTitle, token);
+			bookBuf.BookCheckout = bookId;
+			bookId++;
+			push(currCheckout, bookBuf);
 		}
 
 		// Delete Top of the Checkout
 		if (cmd == 'D')
 		{
-		//	pop(currCheckout);
+			pop(currCheckout);
 			bookId--;
 		}
 		if (cmd == 'S')
 		{
-		//	showCheckout(currCheckout);
+			showCheckout(currCheckout);
 		}
 		
 		if (cmd == 'C')
 		{
 			printf("Berikut adalah daftar buku yang akan dipinjam!");
-		//	showCheckout(currCheckout);
+			showCheckout(currCheckout);
 			
 			cmd = 'E';
 		}

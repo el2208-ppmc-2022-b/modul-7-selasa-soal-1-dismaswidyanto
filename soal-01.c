@@ -114,6 +114,7 @@ int main()
 			scanf("%s",str);
 			char ch = '\n';
 			strncat(str,&ch,1);
+			printf("%s\n",str);
 			token = strtok(str, ",");
 			strcpy(bookBuf.author, token);
 			token = strtok(NULL, ",");

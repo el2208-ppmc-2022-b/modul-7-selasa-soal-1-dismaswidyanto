@@ -19,26 +19,131 @@ struct book
 	int BookCheckout;
 };
 
-//isi dengan tipe data stack/queue anda
+typedef struct node_stack
+{
+	struct node_stack *nextNode;
+	struct book bookData;
+
+} node;
+
+typedef struct stack_Checkout
+{
+	struct node_stack *top;
+
+} stack;
+
+int isEmptyCheckout(stack *Checkout)
+{
+	return (Checkout->top == NULL ? 1 : 0);
+}
+void push(stack *Checkout, struct book _bookData)
+{
+	node *newNode;
+	newNode = malloc(sizeof(struct node_stack));
+	newNode->bookData = _bookData;
+	newNode->nextNode = Checkout->top;
+	Checkout->top = newNode;
+}
+void showCheckout(stack *Checkout)
+{
+
+	node *tmp;
+	int i = 0;
+	tmp = Checkout->top;
+
+	printf("\nCheckout Buku:\n");
+	if (isEmptyCheckout(Checkout))
+	{
+		printf("Checkout Buku Kosong!\n");
+		return;
+	}
+	//Reverse Stack
+	stack *reversed_display;
+	reversed_display = malloc(sizeof(stack *));
+	reversed_display->top = NULL;
+	while (tmp != NULL)
+	{
+		push(reversed_display, tmp->bookData);
+		tmp = tmp->nextNode;
+	}
+
+	//Tampilkan Stack
+	tmp = reversed_display->top;
+	while (tmp != NULL)
+	{
+		printf("   %s by %s", tmp->bookData.author,tmp->bookData.BookTitle);
+		tmp = tmp->nextNode;
+		i++;
+	}
+}
+
+void pop(stack *Checkout)
+{
+	node *tmp;
+	tmp = Checkout->top;
+	Checkout->top = tmp->nextNode;
+
+	free(tmp);
+}
 
 int main()
 {
-	//template input
-	printf("\nMasukkan Perintah: ");
-	scanf("%c", ...);
+	stack *currCheckout;
+	char *token;
+	struct book bookBuf;
+	char str[75];
+	currCheckout = (stack *)malloc(sizeof(stack));
 
-	printf("Masukkan Nama Buku dan Penulis Buku: ");
-	
-	//template output
-	printf("Berikut adalah daftar buku yang akan dipinjam!");
+	// PENTING!!! INISIALISASI
+	currCheckout->top = NULL;
 
-	printf("\nCheckout Buku:\n");
-	printf("Checkout Buku Kosong!\n");
-	printf("%s by %s", ...,...);
+	char cmd;
+	int bookId = 0;
+	int nowIndex = -1;
+	int numOfbook = 0;
 
-	printf("\nTerimakasih sudah menggunakan layanan Checkout Buku!");
+	while (cmd != 'E')
+	{
+		printf("\nMasukkan Perintah: ");
+		scanf("%c", &cmd);
 
+		// PENTING, BUAT PAKE FGETS
+		getchar();
 
+		// ADD LAGU
+		if (cmd == 'A')
+		{
+			printf("Masukkan Nama Buku dan Penulis Buku: ");
+			fgets(str, 76, stdin);
+			token = strtok(str, ",");
+			strcpy(bookBuf.author, token);
+			token = strtok(NULL, ",");
+			strcpy(bookBuf.BookTitle, token);
+			bookBuf.BookCheckout = bookId;
+			bookId++;
+			push(currCheckout, bookBuf);
+		}
+
+		// Delete Top of the Checkout
+		if (cmd == 'D')
+		{
+			pop(currCheckout);
+			bookId--;
+		}
+		if (cmd == 'S')
+		{
+			showCheckout(currCheckout);
+		}
+		
+		if (cmd == 'C')
+		{
+			printf("Berikut adalah daftar buku yang akan dipinjam!");
+			showCheckout(currCheckout);
+			printf("\nTerimakasih sudah menggunakan layanan Checkout Buku!");
+			cmd = 'E';
+		}
+	}
 	return 0;
 }
+
 

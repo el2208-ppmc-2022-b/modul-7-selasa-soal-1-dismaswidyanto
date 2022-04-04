@@ -59,7 +59,7 @@ void showCheckout(stack *Checkout)
 	}
 	//Reverse Stack
 	stack *reversed_display;
-	reversed_display = malloc(sizeof(stack *));
+	reversed_display = malloc(sizeof(stack));
 	reversed_display->top = NULL;
 	while (tmp != NULL)
 	{
@@ -71,7 +71,7 @@ void showCheckout(stack *Checkout)
 	tmp = reversed_display->top;
 	while (tmp != NULL)
 	{
-		printf("   %s by %s", tmp->bookData.author,tmp->bookData.BookTitle);
+		printf("%s by %s", tmp->bookData.author,tmp->bookData.BookTitle);
 		tmp = tmp->nextNode;
 		i++;
 	}

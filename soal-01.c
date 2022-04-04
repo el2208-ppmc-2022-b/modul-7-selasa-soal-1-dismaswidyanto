@@ -98,57 +98,61 @@ int main()
 		scanf("%c", &cmd);
 
 		// ADD BUKU
-if (cmd == 'A')
-        {
-            printf("\nMasukkan Nama Buku dan Penulis Buku: ");
-            fgets(str, 76, stdin);
-            token = strtok(str, ",");
-            strcpy(bookBuf.author, token);
-            token = strtok(NULL, ",");
-            strcpy(bookBuf.BookTitle, token);
-            bookBuf.BookCheckout = bookId;
-            bookId++;
-            push(currCheckout, bookBuf);
-        }
+		if (cmd == 'A')
+		{
+		    printf("\nMasukkan Nama Buku dan Penulis Buku: ");
+		    fgets(str, 76, stdin);
+		    token = strtok(str, ",");
+		    strcpy(bookBuf.author, token);
+		    token = strtok(NULL, ",");
+		    strcpy(bookBuf.BookTitle, token);
+		    bookBuf.BookCheckout = bookId;
+		    bookId++;
+		    push(currCheckout, bookBuf);
+		}
 
-        // Delete Top of the Checkout
-        else if (cmd == 'D')
-        {
-			if (isEmptyCheckout(currCheckout)){
-				showCheckout(currCheckout);
+		// Delete Top of the Checkout
+		else if (cmd == 'D')
+		{
+				if (isEmptyCheckout(currCheckout)){
+					showCheckout(currCheckout);
+				}
+				else
+				{
+					pop(currCheckout);
+					bookId--;
+				}
+		}
+			else if (cmd == 'S')
+		{
+		    showCheckout(currCheckout);
+		}
+
+			else if (cmd == 'C')
+			{
+				if (isEmptyCheckout(currCheckout)){
+					showCheckout(currCheckout);
+				}
+				else{
+					printf("\nBerikut adalah daftar buku yang akan dipinjam!");
+					showCheckout(currCheckout);
+					cmd = 'E';
+				}
+			}
+			else if (cmd == 'E'){
+				cmd = 'E';
 			}
 			else
 			{
-				pop(currCheckout);
-				bookId--;
+				printf("\nInput Perintah Salah! Silahkan Coba Lagi!");
+				
 			}
-        }
-		else if (cmd == 'S')
-        {
-            showCheckout(currCheckout);
-        }
-		
-		else if (cmd == 'C')
-		{
-			if (isEmptyCheckout(currCheckout)){
-				showCheckout(currCheckout);
-			}
-			else{
-				printf("\nBerikut adalah daftar buku yang akan dipinjam!");
-				showCheckout(currCheckout);
-				cmd = 'E';
-			}
-		}
-		else if (cmd == 'E'){
-			cmd = 'E';
-		}
-		else
-		{
-			printf("\nInput Perintah Salah! Silahkan Coba Lagi!");
-		}
-    }
-	printf("\nTerimakasih sudah menggunakan layanan Checkout Buku!");
-    return 0;
+			// Clear buffer
+			getchar();
+			getchar();
+	    }
+		printf("\nTerimakasih sudah menggunakan layanan Checkout Buku!");
+	    return 0;
 }
 
 

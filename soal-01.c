@@ -59,7 +59,6 @@ void showCheckout(stack *Checkout)
 	}
 
 	//Tampilkan Stack
-	tmp = reversed_display->top;
 	while (tmp != NULL)
 	{
 		printf("%s by %s", tmp->bookData.author,tmp->bookData.BookTitle);

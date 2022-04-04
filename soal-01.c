@@ -98,14 +98,14 @@ int main()
         printf("\nMasukkan Perintah: ");
         scanf("%c", &cmd);
 
-        // PENTING, BUAT PAKE FGETS
-        getchar();
-
         // ADD BUKU
         if (cmd == 'A')
         {
             printf("\nMasukkan Nama Buku dan Penulis Buku: ");
-            fgets(str, 76, stdin);
+	    scanf("%s",str);
+	    char ch = '\n''
+	    strncat(str,&ch,1);
+		
             token = strtok(str, ",");
             strcpy(bookBuf.author, token);
             token = strtok(NULL, ",");
@@ -127,29 +127,29 @@ int main()
 				bookId--;
 			}
         }
-		else if (cmd == 'S')
+	else if (cmd == 'S')
         {
             showCheckout(currCheckout);
         }
 		
-		else if (cmd == 'C')
-		{
-			if (isEmptyCheckout(currCheckout)){
-				showCheckout(currCheckout);
-			}
-			else{
-				printf("\nBerikut adalah daftar buku yang akan dipinjam!");
-				showCheckout(currCheckout);
-				cmd = 'E';
-			}
+	else if (cmd == 'C')
+	{
+		if (isEmptyCheckout(currCheckout)){
+			showCheckout(currCheckout);
 		}
-		else if (cmd == 'E'){
+		else{
+			printf("\nBerikut adalah daftar buku yang akan dipinjam!");
+			showCheckout(currCheckout);
 			cmd = 'E';
 		}
-		else
-		{
-			printf("\nInput Perintah Salah! Silahkan Coba Lagi!");
-		}
+	}
+	else if (cmd == 'E'){
+		cmd = 'E';
+	}
+	else
+	{
+		printf("\nInput Perintah Salah! Silahkan Coba Lagi!");
+	}
     }
 	printf("\nTerimakasih sudah menggunakan layanan Checkout Buku!");
     return 0;

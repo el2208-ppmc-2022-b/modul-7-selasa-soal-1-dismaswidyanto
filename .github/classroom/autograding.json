@@ -1,0 +1,104 @@
+{
+  "tests": [
+    {
+      "name": "1",
+      "setup": "make soal-01",
+      "run": "./soal-01",
+      "input": "E",
+      "output": "Terimakasih sudah menggunakan layanan Checkout Buku!",
+      "comparison": "included",
+      "timeout": 1,
+      "points": 10
+    },
+    {
+      "name": "2",
+      "setup": "make soal-01",
+      "run": "./soal-01",
+      "input": "A\r\nHarry Potter,J. K. Rowling\r\nC",
+      "output": "Berikut adalah daftar buku yang akan dipinjam!\r\nCheckout Buku:\r\nHarry Potter by J. K. Rowling\r\n\r\nTerimakasih sudah menggunakan layanan Checkout Buku!",
+      "comparison": "included",
+      "timeout": 1,
+      "points": 10
+    },
+    {
+      "name": "3",
+      "setup": "make soal-01",
+      "run": "./soal-01",
+      "input": "A\r\nPercy Jackson,Rick Riordan\r\nA\r\nHunger Games,Suzanne Collins\r\nS\r\nD\r\nC",
+      "output": "Berikut adalah daftar buku yang akan dipinjam!\r\nCheckout Buku:\r\nPercy Jackson,Rick Riordan\r\n\r\nTerimakasih sudah menggunakan layanan Checkout Buku!",
+      "comparison": "included",
+      "timeout": 1,
+      "points": 10
+    },
+    {
+      "name": "4",
+      "setup": "make soal-01",
+      "run": "./soal-01",
+      "input": "C\r\nA\r\nHow to PPMC,Dismas Widyanto\r\nE",
+      "output": "Terimakasih sudah menggunakan layanan Checkout Buku!",
+      "comparison": "included",
+      "timeout": 1,
+      "points": 10
+    },
+    {
+      "name": "5",
+      "setup": "make soal-01",
+      "run": "./soal-01",
+      "input": "A\r\nPercy Jackson,Rick Riordan\r\nA\r\nHunger Games,Suzanne Collins\r\nD\r\nD\r\nC\r\nA\r\nHow to PPMC,Dismas Widyanto\r\nC",
+      "output": "Berikut adalah daftar buku yang akan dipinjam!\r\nCheckout Buku:\r\nHow to PPMC,Dismas Widyanto\r\n\r\nTerimakasih sudah menggunakan layanan Checkout Buku!",
+      "comparison": "included",
+      "timeout": 1,
+      "points": 10
+    },
+    {
+      "name": "6",
+      "setup": "make soal-01",
+      "run": "./soal-01",
+      "input": "A\r\nPercy Jackson,Rick Riordan\r\nA\r\nHunger Games,Suzanne Collins\r\nA\r\nHow to PPMC,Dismas Widyanto\r\nA\r\nHow to PPMC 2,Dismas Widyanto\r\nA\r\nHow to PPMC 3,Dismas Widyanto\r\nP\r\nX\r\nC",
+      "output": "Berikut adalah daftar buku yang akan dipinjam!\r\nCheckout Buku:\r\nHow to PPMC 3 by Dismas Widyanto\r\nHow to PPMC 2 by Dismas Widyanto\r\nHow to PPMC by Dismas Widyanto\r\nHunger Games by Suzanne Collins\r\nPercy Jackson by Rick Riordan\r\n\r\nTerimakasih sudah menggunakan layanan Checkout Buku!",
+      "comparison": "included",
+      "timeout": 1,
+      "points": 10
+    },
+    {
+      "name": "7",
+      "setup": "make soal-01",
+      "run": "./soal-01",
+      "input": "D\r\nE",
+      "output": "Terimakasih sudah menggunakan layanan Checkout Buku!",
+      "comparison": "included",
+      "timeout": 1,
+      "points": 10
+    },
+    {
+      "name": "8",
+      "setup": "make soal-01",
+      "run": "./soal-01",
+      "input": "M\r\nN\r\nB\r\nD\r\nE",
+      "output": "Terimakasih sudah menggunakan layanan Checkout Buku!",
+      "comparison": "included",
+      "timeout": 1,
+      "points": 10
+    },
+    {
+      "name": "9",
+      "setup": "make soal-01",
+      "run": "./soal-01",
+      "input": "A\r\nHow to PPMC 3,Dismas Widyanto\r\nD\r\nD\r\nA\r\nHow to PPMC 2,Dismas Widyanto\r\nC",
+      "output": "Berikut adalah daftar buku yang akan dipinjam!\r\nCheckout Buku:\r\nHow to PPMC 2 by  Dismas Widyanto\r\n\r\nTerimakasih sudah menggunakan layanan Checkout Buku!",
+      "comparison": "included",
+      "timeout": 1,
+      "points": 10
+    },
+    {
+      "name": "10",
+      "setup": "make soal-01",
+      "run": "./soal-01",
+      "input": "A\r\nAsisten Terbaik,Ivan Giovanni\r\nS\r\nX\r\nD\r\nC\r\nA\r\nAsisten Terbaik,Ivan Giovanni\r\nC",
+      "output": "Berikut adalah daftar buku yang akan dipinjam!\r\nCheckout Buku:\r\nAsisten Terbaik by Ivan Giovanni\r\n\r\nTerimakasih sudah menggunakan layanan Checkout Buku!",
+      "comparison": "included",
+      "timeout": 1,
+      "points": 10
+    }
+  ]
+}

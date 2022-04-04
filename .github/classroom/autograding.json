@@ -15,7 +15,7 @@
       "setup": "make soal-01",
       "run": "./soal-01",
       "input": "A\r\nHarry_Potter,J_K_Rowling\r\nC",
-      "output": "Berikut adalah daftar buku yang akan dipinjam!\r\nCheckout Buku:\r\nHarry Potter by J. K. Rowling\r\n\r\nTerimakasih sudah menggunakan layanan Checkout Buku!",
+      "output": "Berikut adalah daftar buku yang akan dipinjam!\r\nCheckout Buku:\r\nHarry_Potter by J_K_Rowling\r\n\r\nTerimakasih sudah menggunakan layanan Checkout Buku!",
       "comparison": "included",
       "timeout": 1,
       "points": 10
@@ -25,7 +25,7 @@
       "setup": "make soal-01",
       "run": "./soal-01",
       "input": "A\r\nPercy_Jackson,Rick_Riordan\r\nA\r\nHunger_Games,Suzanne_Collins\r\nS\r\nD\r\nC",
-      "output": "Berikut adalah daftar buku yang akan dipinjam!\r\nCheckout Buku:\r\nPercy_Jackson,Rick_Riordan\r\n\r\nTerimakasih sudah menggunakan layanan Checkout Buku!",
+      "output": "Berikut adalah daftar buku yang akan dipinjam!\r\nCheckout Buku:\r\nPercy_Jackson by Rick_Riordan\r\n\r\nTerimakasih sudah menggunakan layanan Checkout Buku!",
       "comparison": "included",
       "timeout": 1,
       "points": 10
@@ -45,7 +45,7 @@
       "setup": "make soal-01",
       "run": "./soal-01",
       "input": "A\r\nPercy_Jackson,Rick_Riordan\r\nA\r\nHunger_Games,Suzanne_Collins\r\nD\r\nD\r\nC\r\nA\r\nHow_to_PPMC,Dismas_Widyanto\r\nC",
-      "output": "Berikut adalah daftar buku yang akan dipinjam!\r\nCheckout Buku:\r\nHow_to_PPMC,Dismas_Widyanto\r\n\r\nTerimakasih sudah menggunakan layanan Checkout Buku!",
+      "output": "Berikut adalah daftar buku yang akan dipinjam!\r\nCheckout Buku:\r\nHow_to_PPMC by Dismas_Widyanto\r\n\r\nTerimakasih sudah menggunakan layanan Checkout Buku!",
       "comparison": "included",
       "timeout": 1,
       "points": 10
@@ -94,7 +94,7 @@
       "name": "10",
       "setup": "make soal-01",
       "run": "./soal-01",
-      "input": "A\r\nAsisten_Terbaik,Ivan_Giovanni\r\nS\r\nX\r\nD\r\nC\r\nA\r\nAsisten Terbaik,Ivan Giovanni\r\nC",
+      "input": "A\r\nAsisten_Terbaik,Ivan_Giovanni\r\nS\r\nX\r\nD\r\nC\r\nA\r\nAsisten_Terbaik,Ivan_Giovanni\r\nC",
       "output": "Berikut adalah daftar buku yang akan dipinjam!\r\nCheckout Buku:\r\nAsisten_Terbaik by Ivan_Giovanni\r\n\r\nTerimakasih sudah menggunakan layanan Checkout Buku!",
       "comparison": "included",
       "timeout": 1,

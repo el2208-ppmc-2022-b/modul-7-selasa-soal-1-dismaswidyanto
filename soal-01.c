@@ -115,19 +115,19 @@ int main()
 		{
 			printf("Masukkan Nama Buku dan Penulis Buku: ");
 			fgets(str, 76, stdin);
-		//	token = strtok(str, ",");
-		//	strcpy(bookBuf.author, token);
-		//	token = strtok(NULL, ",");
-		//	strcpy(bookBuf.BookTitle, token);
-		//	bookBuf.BookCheckout = bookId;
-		//	bookId++;
+			token = strtok(str, ",");
+			strcpy(bookBuf.author, token);
+			token = strtok(NULL, ",");
+			strcpy(bookBuf.BookTitle, token);
+			bookBuf.BookCheckout = bookId;
+			bookId++;
 		//	push(currCheckout, bookBuf);
 		}
 
 		// Delete Top of the Checkout
 		if (cmd == 'D')
 		{
-			pop(currCheckout);
+			//pop(currCheckout);
 			bookId--;
 		}
 		if (cmd == 'S')

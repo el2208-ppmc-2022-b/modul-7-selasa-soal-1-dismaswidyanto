@@ -141,6 +141,10 @@ int main()
 			
 			cmd = 'E';
 		}
+		
+		// Clear buffer
+        	getchar();
+        	getchar();
 	}
 	printf("\nTerimakasih sudah menggunakan layanan Checkout Buku!");
 	return 0;

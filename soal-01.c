@@ -97,7 +97,7 @@ int main()
 	// PENTING!!! INISIALISASI
 	currCheckout->top = NULL;
 
-	char cmd;
+	char cmd = 'X';
 	int bookId = 0;
 	int nowIndex = -1;
 	int numOfbook = 0;
@@ -107,38 +107,35 @@ int main()
 		printf("\nMasukkan Perintah: ");
 		scanf("%c", &cmd);
 
-		// PENTING, BUAT PAKE FGETS
-		getchar();
-
 		// ADD BUKU
 		if (cmd == 'A')
 		{
 			printf("Masukkan Nama Buku dan Penulis Buku: ");
-			fgets(str, 76, stdin);
+			scanf("%s",str);
 			token = strtok(str, ",");
 			strcpy(bookBuf.author, token);
 			token = strtok(NULL, ",");
 			strcpy(bookBuf.BookTitle, token);
 			bookBuf.BookCheckout = bookId;
 			bookId++;
-		//	push(currCheckout, bookBuf);
+			push(currCheckout, bookBuf);
 		}
 
 		// Delete Top of the Checkout
 		if (cmd == 'D')
 		{
-			//pop(currCheckout);
+			pop(currCheckout);
 			bookId--;
 		}
 		if (cmd == 'S')
 		{
-			//showCheckout(currCheckout);
+			showCheckout(currCheckout);
 		}
 		
 		if (cmd == 'C')
 		{
 			printf("Berikut adalah daftar buku yang akan dipinjam!");
-			//showCheckout(currCheckout);
+			showCheckout(currCheckout);
 			
 			cmd = 'E';
 		}

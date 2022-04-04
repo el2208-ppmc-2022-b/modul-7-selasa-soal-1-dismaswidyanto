@@ -121,24 +121,24 @@ int main()
 			strcpy(bookBuf.BookTitle, token);
 			bookBuf.BookCheckout = bookId;
 			bookId++;
-			push(currCheckout, bookBuf);
+		//	push(currCheckout, bookBuf);
 		}
 
 		// Delete Top of the Checkout
 		if (cmd == 'D')
 		{
-			pop(currCheckout);
+		//	pop(currCheckout);
 			bookId--;
 		}
 		if (cmd == 'S')
 		{
-			showCheckout(currCheckout);
+		//	showCheckout(currCheckout);
 		}
 		
 		if (cmd == 'C')
 		{
 			printf("Berikut adalah daftar buku yang akan dipinjam!");
-			showCheckout(currCheckout);
+		//	showCheckout(currCheckout);
 			
 			cmd = 'E';
 		}

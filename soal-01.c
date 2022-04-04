@@ -112,8 +112,8 @@ int main()
 		{
 			printf("Masukkan Nama Buku dan Penulis Buku: ");
 			scanf("%[^\n]s",str);
-		//	char ch = '\n';
-		//	strncat(str,&ch,1);
+			char ch = '\n';
+			strncat(str,&ch,1);
 			printf("%s\n",str);
 			token = strtok(str, ",");
 			strcpy(bookBuf.author, token);

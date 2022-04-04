@@ -130,7 +130,7 @@ int main()
 	else if (cmd == 'S')
         {
             showCheckout(currCheckout);
-	    getchar()
+	    getchar();
         }
 		
 	else if (cmd == 'C')
